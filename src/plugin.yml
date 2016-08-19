@@ -1,0 +1,12 @@
+name: JetBoots
+author: xiaodai
+version: 0.1.0
+description: Allows you to fly when you are wearing a jetboot.
+main: xiaodai.mcplugin.jetboot.Main
+depend: [ProtocolLib]
+commands:
+  giveboot:
+    description: Give a jetboot to you
+    usage: /<command>
+    permission: xiaodai.jetboots.giveboot
+    permission-message: You don't have <permission> to execute this.
