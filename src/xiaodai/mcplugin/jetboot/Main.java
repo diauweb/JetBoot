@@ -1,13 +1,8 @@
 package xiaodai.mcplugin.jetboot;
 
-import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -26,8 +21,9 @@ public class Main extends JavaPlugin implements CommandExecutor{
         this.getLogger().info(" JetBoot Plugin by Xiaodai ");
         this.getLogger().info("***************************");
 
-        Bukkit.getPluginManager().registerEvents(new PlayerMoveListener(this),this);
-        Bukkit.getPluginCommand("giveboot").setExecutor(new BootCommand());
+        Bukkit.getPluginManager().registerEvents(new BootListener(this),this);
+        Bukkit.getPluginCommand("giveboot").setExecutor(new GiveBootCommand());
+        Bukkit.getPluginCommand("setjetboot").setExecutor(new EnchantBootCommand());
 
 
     }

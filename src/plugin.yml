@@ -10,3 +10,9 @@ commands:
     usage: /<command>
     permission: xiaodai.jetboots.giveboot
     permission-message: You don't have <permission> to execute this.
+
+  setjetboot:
+      description: Enchants your boot on feet.
+      usage: /<command>
+      permission: xiaodai.jetboots.enchant
+      permission-message: You don't have <permission> to execute this.
